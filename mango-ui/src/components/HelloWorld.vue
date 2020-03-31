@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
+      <el-button type="primary">主要按钮</el-button>
       <li>
         <a
           href="https://vuejs.org"
