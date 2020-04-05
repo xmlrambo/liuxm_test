@@ -7,7 +7,7 @@
 
 <script>
 import mock from '@/mock/index.js'
-import Cookies from 'js-cookies'
+import Cookies from 'js-cookie'
 import router from '@/router'
 export default {
     name: 'Login',
@@ -15,7 +15,7 @@ export default {
         login(){
             this.$api.login.login().then(function(res){
                 alert(res.data.token)
-                Cookies.set('token',res.data.token)//放置token到Cookies
+                Cookies.set('token', res.data.token)//放置token到Cookies
                 router.push('/')//登陆成功，跳转到主页
             }).catch(function(res){
                 alert(res);
