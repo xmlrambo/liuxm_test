@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import mock from '@/mock/mock.js'
+import mock from '@/mock/index.js'
 import Cookies from 'js-cookies'
 import router from '@/router'
 export default {
@@ -14,9 +14,9 @@ export default {
     methods: {
         login(){
             this.$api.login.login().then(function(res){
-                alert(res.token)
-                Cookies.set('token',res.token)//放置token到Cookies
-                router.push('/home')//登陆成功，跳转到主页
+                alert(res.data.token)
+                Cookies.set('token',res.data.token)//放置token到Cookies
+                router.push('/')//登陆成功，跳转到主页
             }).catch(function(res){
                 alert(res);
             });
