@@ -7,6 +7,7 @@ import api from './http'
 import global from '@/utils/global'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.use(ElementUI)//注册使用elementUI
 Vue.use(api)//注册使用api
